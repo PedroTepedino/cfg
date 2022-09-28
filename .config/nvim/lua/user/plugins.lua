@@ -105,6 +105,12 @@ return packer.startup(function(use)
       end,
   }
 
+  -- Whichkey
+  use {'folke/which-key.nvim'}
+
+  -- Markdown 
+  use {'ellisonleao/glow.nvim'} -- markdown preview
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
