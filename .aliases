@@ -1,4 +1,4 @@
-alias config='/usr/bin/git --git-dir=/home/tepe/dotfiles/ --work-tree=/home/tepe'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias ua-drop-caches='sudo paccache -rk3; yay -Sc --aur --noconfirm'
 alias ua-update-all='export TMPFILE="$(mktemp)"; \
 	sudo true; \
