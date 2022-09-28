@@ -6,6 +6,8 @@ cd ~
 
 echo "Clonning Dotfiles"
 
+git clone https://github.com/PedroTepedino/dotfiles 
+
 if pacman -Qs paru > /dev/null; then
   echo "Paru Already installed"
 else
