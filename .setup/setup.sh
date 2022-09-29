@@ -66,10 +66,10 @@ fi
 
 
 #dotfiles
-git clone --bare https://github.com/PedroTepedino/.dotfiles.git $HOME/.dotfiles
+git clone --bare https://github.com/PedroTepedino/cfg.git $HOME/.cfg
 
 function config {
-  /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
+  /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
 
 mkdir -p .config-backup
