@@ -43,13 +43,13 @@ paru -Syu --needed --noconfirm $packages
 
 
 echo "installing ohmyzsh"
-sh -c "$(curl -fsoh https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+bash -c "$(curl -fsoh https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
-if [ -d ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k ]; then
-  echo "powerlevel10k already cloned"
-else
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-fi
+# if [ -d ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k ]; then
+#   echo "powerlevel10k already cloned"
+# else
+#   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+# fi
 
 
 #dotfiles
