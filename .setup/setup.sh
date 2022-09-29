@@ -22,6 +22,10 @@ cd ~
 if pacman -Qs paru > /dev/null; then
   echo "paru Already installed"
 else 
+  if [ -d "$HOME/paru" ]; then
+    rm -rf $HOME/paru
+  fi
+
   echo "Installing PARU"
   sudo pacman -S --needed base-devel  
   
