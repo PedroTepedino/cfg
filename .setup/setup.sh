@@ -1,24 +1,8 @@
 #!/bin/sh
 
-# funcs
-instal () {
-  package="paru"
-  check="$(sudo pacman -Qs --color always "${package}" | grep "local" | grep "${package} ")";
-  if [ -n "${check}" ] ; then
-    echo "paru NOT found"
-    echo "using pacman instead"
-
-    sudo pacman -Syu --needed --noconfirm $1
-  elif [ -z "${check}" ] ; then
-    paru -Syu --needed --noconfirm $1
-  fi
-}
-
-
 #setup 
 sudo true
 cd ~
-
 
 #paru
 package="paru"
@@ -44,18 +28,18 @@ elif [ -z "${check}" ] ; then
   rm -rf paru
 fi
 
-paru -Syu
+paru -Syu --noconfirm
 
 
 #packages
 packages="git neovim alacritty rate-mirrors xorg xorg-xinit picom firefox awesome glow xf86-video-fbdev"
 echo "Installing packages"
-instal $packages
+paru -Syu --needed --noconfirm $packages
 
 
 #shell
 packages="zsh ttf-meslo-nerd-font-powerlevel10k"
-install $packages
+paru -Syu --needed --noconfirm $packages
 
 if [ -d $HOME/.oh-my-zsh/ ]; then
   echo "ohmyzsh already installed"
