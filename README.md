@@ -11,3 +11,9 @@ To clone or the repo
 ```bash
 curl -L https://raw.githubusercontent.com/PedroTepedino/cfg/master/.setup/cfg.sh | sh 
 ```
+
+To get the aliases 
+
+```bash
+curl -L https://raw.githubusercontent.com/PedroTepedino/cfg/master/.aliases | source 
+```
