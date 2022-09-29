@@ -43,7 +43,7 @@ paru -Syu --needed --noconfirm $packages
 
 
 echo "installing ohmyzsh"
-bash -c "$(curl -fsoh https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # if [ -d ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k ]; then
 #   echo "powerlevel10k already cloned"
