@@ -2,12 +2,14 @@
 
 # funcs
 instal () {
-  if pacman -Qs paru > /dev/null; then
+  package="paru"
+  check="$(sudo pacman -Qs --color always "${package}" | grep "local" | grep "${package} ")";
+  if [ -n "${check}" ] ; then
     echo "paru NOT found"
     echo "using pacman instead"
 
     sudo pacman -Syu --needed --noconfirm $1
-  else
+  elif [ -z "${check}" ] ; then
     paru -Syu --needed --noconfirm $1
   fi
 }
