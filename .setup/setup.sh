@@ -83,5 +83,5 @@ else
 fi;
 
 config checkout
-confi config status.showUntrackedFiles no
+config config status.showUntrackedFiles no
 
