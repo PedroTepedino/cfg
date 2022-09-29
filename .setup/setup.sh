@@ -21,9 +21,11 @@ cd ~
 
 
 #paru
-if pacman -Qs paru > /dev/null; then
+package="paru"
+check="$(sudo pacman -Qs --color always "${package}" | grep "local" | grep "${package} ")";
+if [ -n "${check}" ] ; then
   echo "paru Already installed"
-else 
+elif [ -z "${check}" ] ; then
   if [ -d "$HOME/paru" ]; then
     rm -rf $HOME/paru
   fi
@@ -41,6 +43,8 @@ else
   echo "Removing Repo"
   rm -rf paru
 fi
+
+paru -Syu
 
 
 #packages
