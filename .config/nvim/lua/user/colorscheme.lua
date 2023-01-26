@@ -17,13 +17,13 @@ material.setup({
 		popup_menu = false, -- Enable lighter background for the popup menu
 	},
 
-	italics = {
-		comments = false, -- Enable italic comments
-		keywords = false, -- Enable italic keywords
-		functions = false, -- Enable italic functions
-		strings = false, -- Enable italic strings
-		variables = false -- Enable italic variables
-	},
+	styles = {
+		comments  = { italic =  false }, -- Enable italic comments
+		keywords  = { italic =  false }, -- Enable italic keywords
+		functions = { italic =  false }, -- Enable italic functions
+		strings   = { italic =  false }, -- Enable italic strings
+		variables = { italic =  false }, -- Enable italic variables
+    },
 
 	contrast_filetypes = { -- Specify which filetypes get the contrasted (darker) background
 		"terminal", -- Darker terminal background
